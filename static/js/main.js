@@ -1,26 +1,5 @@
 "use strict";
 
-var inputEqualValidation = document.querySelectorAll('[data-validate-equal]');
-inputEqualValidation.forEach(function (input) {
-  var validValues = input.dataset.validateEqual;
-  var inputContainer = input.closest('.input');
-  var button = input.closest('.outpoints__container').querySelector('.button-js');
-  if (validValues) validValues = validValues.split(',').map(function (item) {
-    return item.trim();
-  });
-  input.addEventListener('input', function () {
-    var currentValue = input.value.trim();
-    if (validValues.indexOf(currentValue) !== -1) {
-      inputContainer.classList.add('valid');
-      button.removeAttribute('disabled');
-      return;
-    }
-    inputContainer.classList.remove('valid');
-    button.setAttribute('disabled', true);
-  });
-});
-"use strict";
-
 var passwordToggler = document.querySelectorAll('.input-toggler');
 passwordToggler.forEach(function (toggler) {
   toggler.addEventListener('click', function () {
@@ -80,6 +59,27 @@ popupCloseButtons.forEach(function (closeBtn) {
   closeBtn.addEventListener('click', function () {
     popupContainer.classList.remove('active');
     activeScroll();
+  });
+});
+"use strict";
+
+var inputEqualValidation = document.querySelectorAll('[data-validate-equal]');
+inputEqualValidation.forEach(function (input) {
+  var validValues = input.dataset.validateEqual;
+  var inputContainer = input.closest('.input');
+  var button = input.closest('.outpoints__container').querySelector('.button-js');
+  if (validValues) validValues = validValues.split(',').map(function (item) {
+    return item.trim();
+  });
+  input.addEventListener('input', function () {
+    var currentValue = input.value.trim();
+    if (validValues.indexOf(currentValue) !== -1) {
+      inputContainer.classList.add('valid');
+      button.removeAttribute('disabled');
+      return;
+    }
+    inputContainer.classList.remove('valid');
+    button.setAttribute('disabled', true);
   });
 });
 "use strict";
