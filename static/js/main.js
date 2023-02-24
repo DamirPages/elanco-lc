@@ -88,7 +88,7 @@ var emptyVlidationFields = document.querySelectorAll('.empty-validation');
 emptyVlidationFields.forEach(function (field) {
   var container = field.closest('.lc-container');
   var textAreaContainer = field.parentElement;
-  var button = container.querySelector('.button-js');
+  var button = container === null || container === void 0 ? void 0 : container.querySelector('.button-js');
   field.addEventListener('input', function () {
     if (!field.value.length) {
       textAreaContainer.classList.remove('valid');
@@ -131,6 +131,152 @@ closeButtonPages.forEach(function (close) {
     document.querySelector('.pages-overlay').classList.remove('active');
   });
 });
+"use strict";
+
+var studyProgrammContainers = document.querySelectorAll('.studyprogram__container');
+var nextButtons = document.querySelectorAll('.studyprogram__container .button-next');
+var prevButtons = document.querySelectorAll('.studyprogram__container .button-prev');
+if (studyProgrammContainers.length > 0) {
+  studyInit(studyProgrammContainers, nextButtons, prevButtons);
+}
+function studyInit(containers, nextButtons, prevButtons) {
+  var containersTotal = containers.length;
+  var containerCurrent = 1;
+  var progressPercent = containerCurrent * 100 / containersTotal;
+  var totalEl = document.querySelectorAll('.progress-total');
+  var currentEl = document.querySelectorAll('.progress-current');
+  var line = document.querySelectorAll('.progress__fill');
+  totalEl.forEach(function (item) {
+    return item.textContent = containersTotal;
+  });
+  currentEl.forEach(function (item) {
+    return item.textContent = containerCurrent;
+  });
+  nextButtons.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      containerCurrent += 1;
+      progressPercent = containerCurrent * 100 / containersTotal;
+      containers.forEach(function (container) {
+        return container.classList.remove('active');
+      });
+      containers[containerCurrent - 1].classList.add('active');
+      currentEl.forEach(function (item) {
+        return item.textContent = containerCurrent;
+      });
+      line.forEach(function (line) {
+        return line.style.width = progressPercent + '%';
+      });
+    });
+  });
+  prevButtons.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      containerCurrent -= 1;
+      progressPercent = containerCurrent * 100 / containersTotal;
+      containers.forEach(function (container) {
+        return container.classList.remove('active');
+      });
+      containers[containerCurrent - 1].classList.add('active');
+      currentEl.forEach(function (item) {
+        return item.textContent = containerCurrent;
+      });
+      line.forEach(function (line) {
+        return line.style.width = progressPercent + '%';
+      });
+    });
+  });
+}
+"use strict";
+
+var testContainers = document.querySelectorAll('.test__container');
+var testButtonsNext = document.querySelectorAll('.next-question');
+var testButtonCheck = document.querySelectorAll('.button-show-result');
+var answerPercent = document.querySelector('.answer-percent');
+if (testContainers.length) {
+  testInit(testContainers, testButtonsNext, testButtonCheck);
+}
+var questionsCorrectAnswers = {
+  "quest1-1": "А",
+  "quest1-2": "Б",
+  "quest1-3": "В",
+  "quest1-4": "В",
+  "quest1-5": "Г",
+  "quest2-1": "В",
+  "quest2-2": "А",
+  "quest2-3": "А",
+  "quest2-4": "Б",
+  "quest2-5": "Б",
+  "quest3-1": "Г",
+  "quest3-2": "Г",
+  "quest3-3": "В",
+  "quest3-4": "А",
+  "quest3-5": "Г"
+};
+function testInit(testContainers, testButtonsNext, testButtonCheck) {
+  var testTotalQuestions = document.querySelectorAll('.progress-total');
+  var testCurrentQuestion = document.querySelectorAll('.progress-current');
+  var line = document.querySelectorAll('.progress__fill');
+  var testTotalsContainers = testContainers.length;
+  var testCurrentContainer = 1;
+  var progressPercent = testCurrentContainer * 100 / testTotalsContainers;
+  var radioContainers = document.querySelectorAll('.test__answer');
+  var currentQuestion = '';
+  var currentAnswer = '';
+  var answersTotal = 0;
+  radioContainers.forEach(function (radioContainer) {
+    var radio = radioContainer.querySelector('input');
+    var answer = radioContainer.querySelector('.answer').textContent;
+    radio.addEventListener('change', function () {
+      var answerDialog = testContainers[testCurrentContainer - 1].querySelector('.test__dialog-answer .test-message');
+      answerDialog.textContent = answer;
+      testContainers[testCurrentContainer - 1].querySelector('.button-show-result').classList.add('active');
+      currentQuestion = radio.getAttribute('name');
+      currentAnswer = radio.value;
+    });
+  });
+  testButtonCheck.forEach(function (check) {
+    check.addEventListener('click', function () {
+      if (questionsCorrectAnswers[currentQuestion] === currentAnswer) {
+        testContainers[testCurrentContainer - 1].classList.add('quest-correct');
+        answersTotal += 100 / testTotalsContainers;
+        answerPercent.value = answersTotal;
+      } else {
+        testContainers[testCurrentContainer - 1].classList.add('quest-wrong');
+      }
+      testContainers[testCurrentContainer - 1].querySelectorAll('.button').forEach(function (btn) {
+        return btn.removeAttribute('disabled');
+      });
+      testContainers[testCurrentContainer - 1].querySelector("[value=\"".concat(questionsCorrectAnswers[currentQuestion], "\"] + .answer")).classList.add('correct');
+    });
+  });
+  testCurrentQuestion.forEach(function (item) {
+    return item.textContent = testCurrentContainer;
+  });
+  testTotalQuestions.forEach(function (item) {
+    return item.textContent = testTotalsContainers;
+  });
+  line.forEach(function (line) {
+    return line.style.width = progressPercent + '%';
+  });
+  testButtonsNext.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      testCurrentContainer += 1;
+      progressPercent = testCurrentContainer * 100 / testTotalsContainers;
+      testCurrentQuestion.forEach(function (item) {
+        return item.textContent = testCurrentContainer;
+      });
+      line.forEach(function (line) {
+        return line.style.width = progressPercent + '%';
+      });
+      testContainers.forEach(function (container) {
+        return container.classList.remove('active');
+      });
+      testContainers[testCurrentContainer - 1].classList.add('active');
+    });
+  });
+}
 "use strict";
 
 var uploadInput = document.querySelectorAll('.upload-input');

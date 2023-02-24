@@ -62,64 +62,386 @@
         </header>
         <div class="main">
             <div class="main__container">
-                <div class="login">
-                    <div class="title">
-                        Вход в личный кабинет
-                    </div>
-                    <form class="login__form">
-                        <div class="login__input">
-                            <label for="tel" class="login__placeholder">
-                                Номер телефона
-                            </label>
-                            <input type="text" id="tel" class="tel" value="" placeholder="+7 (123) 456 7890">
+                <div class="progress">
+                    <div class="progress__title">
+                        <div class="progress__name">Обучение</div>
+                        <div class="progress__num">
+                            Пройдено
+                            <span class="progress-current">0</span>
+                            <span>/</span>
+                            <span class="progress-total">0</span>
                         </div>
-                        <div class="login__input">
-                            <label for="password" class="login__placeholder">
-                                Пароль
-                            </label>
-                            <input type="password" id="password" value="12345678">
-                            <div class="input-toggler">
-                                <img src="./static/img/content/eye-close.svg" alt="">
-                                <img src="./static/img/content/eye-open.svg" alt="">
+                    </div>
+                    <div class="progress__line">
+                        <div class="progress__fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <form class="test">
+                    <input type="hidden" name="answer-percent" class="answer-percent">
+                    <!-- 0...100% -->
+                    <div class="test__container active">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    Против каких эктопаразитов действует ошейник Форесто®?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
                             </div>
                         </div>
-                        <button class="button">
-                            Войти
-                        </button>
-                        <a href="#" class="login__link">
-                      Забыли пароль?
-                    </a>
-                    </form>
-                </div>
-                <div class="copyright">
-                    <div class="copyright__column">
-                        <p>
-                            <b>ООО «Эланко Рус»</b>
-                            <br>Юридический адрес: 123112, Москва, Пресненская набережная, д.10, этаж 16, помещение 1Б, комната 13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ИНН: 7823777713 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ОГРН: 1027810304380
-                        </p>
-                        <p>
-                            <a href="">Политика конфиденциальности</a>
-                        </p>
-                        <p>
-                            Не является публичной офертой. Адвантикс, Мильбемакс, Milbemax, Форесто, Elanco и диагональная полоса являются товарными знаками Elanco или его аффилированных лиц.
-                        </p>
-                        <p>
-                            ©2023 Elanco и его аффилированные лица. PM-RU-22-0071. Все права защищены
-                        </p>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest1-1" value="А">
+                                <span class="answer">Блохи, личинки блох, вши, власоеды, иксодовые клещи</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest1-1" value="Б">
+                                <span class="answer">Иксодовые клещи, блохи, власоеды</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest1-1" value="В">
+                                <span class="answer">Блохи, вши, власоеды, зудневые клещи, комары</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Форесто® действует против иксодовых клещей, блох и их личинок, вшей и власоедов.
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    У Форесто® широкий спектр защиты, он действует против иксодовых клещей, блох и их личинок, вшей и власоедов.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
                     </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    В течение какого времени ошейник Форесто® непрерывно помогает защищать собаку и кошку от клещей и блох?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest1-2" value="А">
+                                <span class="answer">В течение месяца</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest1-2" value="Б">
+                                <span class="answer">В течение 8 месяцев</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest1-2" value="В">
+                                <span class="answer">В течение 3 месяцев</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Ошейник Форесто® обеспечивает длительную защиту до 8 месяцев без необходимости обновлять его в течение сезона.
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    У Форесто® продолжительность защиты гораздо дольше – он действует в течение 8 месяцев!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
+                    </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    Если в ошейнике Форесто® помыть животное, через сколько времени он начнет работать?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest1-3" value="А">
+                                <span class="answer">Через 2 часа</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest1-3" value="Б">
+                                <span class="answer">После того, как высохнет</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest1-3" value="В">
+                                <span class="answer">Ошейник водостойкий, при намокании шерсти действие ошейника сохраняется</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Ошейник Форесто® водостойкий. Животное может мыться или купаться в ошейнике, так как его действие сохраняется даже при намокании шерсти.
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Ошейник Форесто® водостойкий. Животное может мыться или купаться в ошейнике, так как его действие сохраняется даже при намокании шерсти.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
+                    </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    При правильном надевании ошейника Форесто® сколько см должно остаться между шеей и ошейником?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest1-4" value="А">
+                                <span class="answer">5 см</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest1-4" value="Б">
+                                <span class="answer">2-3 см</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest1-4" value="В">
+                                <span class="answer">1-1,5 см</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Посмотрите, как выглядит правильное положение ошейника.
+                                </div>
+                                <img src="./static/img/content/answer-preview.png" alt="">
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Между шеей и ошейником должно оставаться 1-1,5 см. Посмотрите, как выглядит правильное положение ошейника.
+                                </div>
+                                <img src="./static/img/content/answer-preview.png" alt="">
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
+                    </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    Какие капли на холку для собак вы порекомендуете с похожими свойствами на блох и клещей, как у ошейника Форесто®?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest1-5" value="А">
+                                <span class="answer">Адвантейдж®</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest1-5" value="Б">
+                                <span class="answer">Прак-тик®</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest1-5" value="В">
+                                <span class="answer">Адвокат®</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Г</span>
+                                <input type="radio" name="quest1-5" value="Г">
+                                <span class="answer">Адвантикс®</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Благодаря репеллентному действию, Форесто® и Адвантикс® защищают животных до укусов паразитов.
+                                </div>
+                                <img src="./static/img/content/answer-preview.png" alt="">
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Как и ошейник Форесто®, капли на холку Адвантикс® защищают животных до укусов паразитов.
+                                </div>
+                                <img src="./static/img/content/answer-preview.png" alt="">
+                            </div>
+                        </div>
+                        <button type="submit" class="button" disabled>
+                            Следующий вопрос
+                        </button>
+                    </div>
+
+
+
+                </form>
+                <div class="copyright">
                     <div class="copyright__column">
                         <div class="copyright__big">
                             ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ.
                             <br>ПЕРЕД ПРИМЕНЕНИЕМ ОЗНАКОМЬТЕСЬ С ИНСТРУКЦИЕЙ.
                         </div>
-                        <p>
-                            <a href="#" data-popup-open="popup__help">Служба поддержки</a>
-                            <a href="#" data-popup-open="popup__rules">Правила Программы</a>
-                        </p>
-                        <p>
-                            Программа действует на территории РФ для продавцов зоомагазинов. Общий срок Программы с 01.03.2023 г. по 31.05.2023 г. Информация об организаторе Программы, о правилах ее проведения, количестве подарков, сроках, месте и порядке их получения предоставляется
-                            организатором Программы ООО «Революшн» по телефону горячей линии: +7(964) 719-72-74 (с 10:00 до 18:00 МСК).
-                        </p>
                     </div>
                 </div>
             </div>

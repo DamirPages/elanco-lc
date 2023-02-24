@@ -50,6 +50,7 @@
             (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
         </script>
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
     </head>
 
     <body class="page">
@@ -62,64 +63,380 @@
         </header>
         <div class="main">
             <div class="main__container">
-                <div class="login">
-                    <div class="title">
-                        Вход в личный кабинет
-                    </div>
-                    <form class="login__form">
-                        <div class="login__input">
-                            <label for="tel" class="login__placeholder">
-                                Номер телефона
-                            </label>
-                            <input type="text" id="tel" class="tel" value="" placeholder="+7 (123) 456 7890">
+                <div class="progress">
+                    <div class="progress__title">
+                        <div class="progress__name">Обучение</div>
+                        <div class="progress__num">
+                            Пройдено
+                            <span class="progress-current">0</span>
+                            <span>/</span>
+                            <span class="progress-total">0</span>
                         </div>
-                        <div class="login__input">
-                            <label for="password" class="login__placeholder">
-                                Пароль
-                            </label>
-                            <input type="password" id="password" value="12345678">
-                            <div class="input-toggler">
-                                <img src="./static/img/content/eye-close.svg" alt="">
-                                <img src="./static/img/content/eye-open.svg" alt="">
+                    </div>
+                    <div class="progress__line">
+                        <div class="progress__fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="studyprogram">
+                    <div class="studyprogram__container active">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program3-1.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            <b>Мильбемакс®</b> является препаратом №1 в России среди антигельминтных препаратов для животных  - вы можете быть уверены в том, что <b>рекомендуете лучшее для своих покупателей!</b>
+                        </div>
+
+                        <div class="studyprogram__infotext">
+                            * Мильбемакс® №1 в России среди антигельминтных препаратов для животных. По данным продаж на розничном рынке RNC Pharma® АБД «Аудит розничных продаж ВетЛП в России» за 2022 год
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program3-2.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            <b>Преимущества препарата Мильбемакс®:</b> 
+                        </div>
+
+                        <div class="studyprogram__advlist">
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon3-1.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Защищает питомца от <b>наиболее распространенных опасных гельминтов</b>
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon3-2.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Маленькая таблетка для кошек со вкусом говядины: удобно давать животному, большинство кошек поедает таблетку самостоятельно благодаря привлекательному вкусу
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon3-3.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Удобная дозировка по весу
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon3-4.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Подходит всем породам кошек и собак*, а также котятам и щенкам
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon3-5.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Эффективность и безопасность <b>Мильбемакс®  подтверждены многочисленными исследованиями</b>
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon3-6.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Производится во Франции с соблюдением высоких стандартов качества на всех этапах производства
+                                </div>
                             </div>
                         </div>
-                        <button class="button">
-                            Войти
-                        </button>
-                        <a href="#" class="login__link">
-                      Забыли пароль?
-                    </a>
-                    </form>
+
+                        <div class="studyprogram__infotext">
+                            * Согласно инструкции по препарату Мильбемакс®
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program3-3.jpg" alt="">
+                        </div>
+
+                        <div class="studyprogram__message">
+                            От каких паразитов защищает Мильбемакс®?
+                        </div>
+
+                        <div class="studyprogram__content">
+                            У <b>Мильбемакс®</b> широкий спектр действия - он действует на 12  видов круглых и ленточных гельминтов (глистов) у собак и  6 видов у кошек, включая опасных сердечных паразитов!
+                            <br>Благодаря этому, <b>Мильбемакс® защищает питомца от наиболее распространенных гельминтов</b>, и владелец может быть спокоен за здоровье своего питомца.
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program3-4.jpg" alt="">
+                        </div>
+
+                        <div class="studyprogram__message">
+                            Какие преимущества у препарата Мильбемакс®?
+                        </div>
+
+                        <div class="studyprogram__content">
+                            У препарата <b>Мильбемакс® удобная дозировка по весу и маленькая таблетка</b>. Это облегчает дачу препарата животному, делая процесс обработки от глистов простым для владельца. Всего одна таблетка для широкого диапазона веса
+                            животных!
+                            <br>Таблетка <b>Мильбемакс®</b> для кошек <b>со вкусом говядины</b>, и многие кошки едят ее самостоятельно. Это делает обработку от глистов простой - без стресса для владельца и кошки.
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program3-5.jpg" alt="">
+                        </div>
+
+                        <div class="studyprogram__message">
+                            В чем отличие Мильбемакс® от аналогов?
+                        </div>
+
+                        <div class="studyprogram__content">
+                            <b>Мильбемакс®</b> производится во Франции с соблюдением высоких стандартов качества на всех этапах производства.
+                            <br>Эффективность и безопасность <b>Мильбемакс®</b> подтверждены <b>многочисленными исследованиями</b>.
+                            <br>Вы можете быть уверены в том, что продаете <b>действительно проверенный препарат</b>, который не навредит здоровью животного и поможет избавить его от паразитов.
+                        </div>
+
+                        <div class="studyprogram__bluetitle">
+                            Посмотрите видео об истории препарата Мильбемакс® и принципах его действия
+                        </div>
+
+                        <a href="https://www.youtube.com/watch?v=G8lVXBN8ZFk" data-fancybox="video-gallery" class="studyprogram__video">
+                            <div class="studyprogram__video-preview">
+                                <img src="./static/img/content/study-video-bg4.jpg" alt="">
+                            </div>
+                            <div class="studyprogram__video-icon">
+                                <img src="./static/img/content/play.svg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program3-6.jpg" alt="">
+                        </div>
+
+                        <div class="studyprogram__message">
+                            Для каких животных подходит Мильбемакс®?
+                            <br>Можно ли применять беременным и лактирующим животным?
+                        </div>
+
+                        <div class="studyprogram__advlist">
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/icon-1.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Подходит всем породам кошек и собак. 
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/icon-2.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Можно беременным и лактирующим животным. 
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/icon-3.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Взрослым ĸошĸам и ĸотятам: с 6 недель и 500 г веса.  
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/icon-4.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Взрослым собаĸам и щенĸам: с 2-недельного возраста и 500 г веса.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program3-7.jpg" alt="">
+                        </div>
+
+                        <div class="studyprogram__message">
+                            Какие действующие вещества в составе Мильбемакс®?
+                        </div>
+
+                        <div class="studyprogram__content">
+                            <ul>
+                                <li>Мильбемицина оĸсим (<b>действует на круглых гельминтов</b>)</li>
+                                <li>Празиĸвантел (<b>действует на ленточных гельминтов</b>)</li>
+                            </ul>
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__message">
+                            Как часто необходимо применять Мильбемакс®?
+                        </div>
+
+                        <div class="studyprogram__content">
+                            Зависит от образа жизни питомца
+                        </div>
+
+                        <div class="studyprogram__animaltypes">
+                            <div class="studyprogram__animaltype">
+                                <div class="studyprogram__animaltitle">
+                                    Питомец-домосед
+                                </div>
+                                <div class="studyprogram__animalimg">
+                                    <img src="./static/img/content/type1.png" alt="">
+                                </div>
+                                <div class="studyprogram__animaltext">
+                                    Живет в доме и не контактирует с другими животными, часто выходящими на улицу.
+                                </div>
+                                <div class="studyprogram__animalarrow">
+                                    <img src="./static/img/content/arrow1.svg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="studyprogram__animaltype">
+                                <div class="studyprogram__animaltitle">
+                                    Питомец-любитель прогулок
+                                </div>
+                                <div class="studyprogram__animalimg">
+                                    <img src="./static/img/content/type2.png" alt="">
+                                </div>
+                                <div class="studyprogram__animaltext">
+                                    Выходит на улицу, имеет прямой доступ к паркам, песочницам, фекалиям других собак и кошек, но не подбирает ничего с земли и не охотится.
+                                </div>
+                                <div class="studyprogram__animalarrow">
+                                    <img src="./static/img/content/arrow2.svg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="studyprogram__animaltype">
+                                <div class="studyprogram__animaltitle">
+                                    Питомец в группе риска
+                                </div>
+                                <div class="studyprogram__animalimg">
+                                    <img src="./static/img/content/type3.png" alt="">
+                                </div>
+                                <div class="studyprogram__animaltext">
+                                    Выходит на улицу, имеет прямой доступ к паркам, песочницам, фекалиям других собак и кошек и часто охотится или подбирает что-то с земли. Может жить в зоне, эндемичной по дирофиляриозу и/или эхинококкозу.
+                                </div>
+                                <div class="studyprogram__animalarrow">
+                                    <img src="./static/img/content/arrow3.svg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="studyprogram__bg">
+                                <img src="./static/img/content/type-bg.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="studyprogram__alert">
+                            <div class="studyprogram__alert-icon">
+                                <img src="./static/img/content/alert.png" alt="">
+                            </div>
+                            <div class="studyprogram__alert-text">
+                                Если невозможно адекватно оценить риск для животного, необходимо проводить дегельминтизацию не реже 4 раз в год!*
+                            </div>
+                        </div>
+
+                        <div class="studyprogram__infotext">
+                            * ESCCAP Guideline Sixth Edition – May 2021. Руководство ESCCAP шестое издание 2021 год.
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program3-8.jpg" alt="">
+                        </div>
+
+                        <img src="./static/img/content/study-img7.png" class="large-img" alt="">
+
+                        <div class="studyprogram__content">
+                            Дозировка <b>Мильбемакс®</b> для собак 
+                        </div>
+
+                        <img src="./static/img/content/study-img8.jpg" alt="">
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program3-9.jpg" alt="">
+                        </div>
+
+                        <img src="./static/img/content/study-img9.png" class="large-img" alt="">
+
+                        <div class="studyprogram__content">
+                            Дозировка <b>Мильбемакс®</b> для кошек 
+                        </div>
+
+                        <img src="./static/img/content/study-img10.png" alt="">
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <a href="./study-finish3.html" class="button">Дальше</a>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="copyright">
-                    <div class="copyright__column">
-                        <p>
-                            <b>ООО «Эланко Рус»</b>
-                            <br>Юридический адрес: 123112, Москва, Пресненская набережная, д.10, этаж 16, помещение 1Б, комната 13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ИНН: 7823777713 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ОГРН: 1027810304380
-                        </p>
-                        <p>
-                            <a href="">Политика конфиденциальности</a>
-                        </p>
-                        <p>
-                            Не является публичной офертой. Адвантикс, Мильбемакс, Milbemax, Форесто, Elanco и диагональная полоса являются товарными знаками Elanco или его аффилированных лиц.
-                        </p>
-                        <p>
-                            ©2023 Elanco и его аффилированные лица. PM-RU-22-0071. Все права защищены
-                        </p>
-                    </div>
                     <div class="copyright__column">
                         <div class="copyright__big">
                             ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ.
                             <br>ПЕРЕД ПРИМЕНЕНИЕМ ОЗНАКОМЬТЕСЬ С ИНСТРУКЦИЕЙ.
                         </div>
-                        <p>
-                            <a href="#" data-popup-open="popup__help">Служба поддержки</a>
-                            <a href="#" data-popup-open="popup__rules">Правила Программы</a>
-                        </p>
-                        <p>
-                            Программа действует на территории РФ для продавцов зоомагазинов. Общий срок Программы с 01.03.2023 г. по 31.05.2023 г. Информация об организаторе Программы, о правилах ее проведения, количестве подарков, сроках, месте и порядке их получения предоставляется
-                            организатором Программы ООО «Революшн» по телефону горячей линии: +7(964) 719-72-74 (с 10:00 до 18:00 МСК).
-                        </p>
                     </div>
                 </div>
             </div>
@@ -617,6 +934,7 @@
 
 
         <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
         <script src="static/js/main.min.js"></script>
     </body>
 

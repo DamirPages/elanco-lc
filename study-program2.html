@@ -50,6 +50,7 @@
             (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
         </script>
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
     </head>
 
     <body class="page">
@@ -62,64 +63,361 @@
         </header>
         <div class="main">
             <div class="main__container">
-                <div class="login">
-                    <div class="title">
-                        Вход в личный кабинет
-                    </div>
-                    <form class="login__form">
-                        <div class="login__input">
-                            <label for="tel" class="login__placeholder">
-                                Номер телефона
-                            </label>
-                            <input type="text" id="tel" class="tel" value="" placeholder="+7 (123) 456 7890">
+                <div class="progress">
+                    <div class="progress__title">
+                        <div class="progress__name">Обучение</div>
+                        <div class="progress__num">
+                            Пройдено
+                            <span class="progress-current">0</span>
+                            <span>/</span>
+                            <span class="progress-total">0</span>
                         </div>
-                        <div class="login__input">
-                            <label for="password" class="login__placeholder">
-                                Пароль
-                            </label>
-                            <input type="password" id="password" value="12345678">
-                            <div class="input-toggler">
-                                <img src="./static/img/content/eye-close.svg" alt="">
-                                <img src="./static/img/content/eye-open.svg" alt="">
+                    </div>
+                    <div class="progress__line">
+                        <div class="progress__fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="studyprogram">
+                    <div class="studyprogram__container active">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-1.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            <b>Адвантикс®</b> - препарат в форме капель на холку от компании Elanco, помогает защитить собаку ДО УКУСА от самых распространенных представителей рода иксодовых клещей в России.
+                            <br>Помимо этого <b>Адвантикс®</b> защищает питомца от блох и назойливых комаров, москитов и мух – переносчиков опасных заболеваний, а также от аллергических реакций на их укус.​
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-2.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            <b>Адвантикс®</b> производится в Германии с соблюдением высоких стандартов качества на всех этапах производства.
+                            <br>Эффективность и безопасность <b>Адвантикс®</b> подтверждены в многочисленных исследованиях.
+                            <br>Вы можете быть уверены в том, что предлагаете покупателям действительно проверенный препарат, который поможет избавить их питомцев от паразитов.
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-3.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            <b>Преимущества препарата Адвантикс®:</b>
+                        </div>
+                        <div class="studyprogram__advlist">
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon1.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Обладает репеллентным (отпугивающим) действием, помогая защитить собаку ДО УКУСА паразита, что снижает риск передачи опасных заболеваний. Репеллентная защита сохраняется у Адвантикс® в течение всего месяца!
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon2.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Действует против всех основных наружных паразитов: иксодовых клещей, блох (и их личинок), комаров, москитов, мух и власоедов.
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon3.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Подходит собакам мелких пород  от 1,5 кг и разрешен щенкам с 7-недельного возраста и/или 1,5 кг.
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon4.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Может использоваться как часть стратегии лечения БАД (блошиный аллергический дерматит).
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon5.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Водостойкий и удобный в применении.
+                                </div>
+                            </div>
+                            <div class="studyprogram__advitem">
+                                <div class="studyprogram__advicon">
+                                    <img src="./static/img/content/adv-icon6.svg" alt="">
+                                </div>
+                                <div class="studyprogram__advtext">
+                                    Доступен в упаковке по 1 и 4 пипетки.
+                                </div>
                             </div>
                         </div>
-                        <button class="button">
-                            Войти
-                        </button>
-                        <a href="#" class="login__link">
-                      Забыли пароль?
-                    </a>
-                    </form>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-4.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__message">
+                            От каких паразитов защищает препарат Адвантикс®?
+                        </div>
+                        <div class="studyprogram__content">
+                            Защищает питомца от иксодовых клещей, блох (и их личинок), комаров, москитов, мух и власоедов.
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-5.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__message">
+                            Чем Адвантикс® лучше других капель от внешних паразитов?
+                        </div>
+                        <div class="studyprogram__content">
+                            Препарат <b>Адвантикс®</b> работает иначе!
+                            <br>
+                            <b>Адвантикс®</b> защищает собаку ДО УКУСА, что снижает риск передачи паразитом опасных заболеваний.
+                            <br>Репеллентный эффеĸт действует губительно на ĸлещей (а также комаров, мух и москитов) при ĸонтаĸте с ĸожей или шерстью питомца, т.е. клещу не нужно кусать, чтобы препарат начал на него действовать.
+                            <br>А благодаря действию имидаклоприда, блохи теряют способность кусать, за счет чего снижается количество укусов.
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-6.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            Адвантикс® отпугивает летающих насекомых, снижая риск передачи опасных заболеваний и аллергических реакций на их укус.
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=G8lVXBN8ZFk" data-fancybox="video-gallery" class="studyprogram__video">
+                            <div class="studyprogram__video-preview">
+                                <img src="./static/img/content/study-video-bg3.jpg" alt="">
+                            </div>
+                            <div class="studyprogram__video-icon">
+                                <img src="./static/img/content/play.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-7.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            <b>Репеллентная защита сохраняется у Адвантикс® в течение всего месяца.</b>
+                            После нанесения препарат Адвантикс® полностью распространяется по телу собаки в среднем в течение 2 (двух) дней, действие препарата сохраняется <b>в течение месяца.</b>
+                        </div>
+
+                        <img src="./static/img/content/study-img4.png" alt="">
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-8.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__message">
+                            Нужно наносить препарат Адвантикс® каждый раз после мытья?
+                        </div>
+                        <div class="studyprogram__content">
+                            Действующие вещества препарата <b>Адвантикс®</b>, накапливаясь в липидном слое, трудно смываются водой, что обеспечивает действие препарата <b>в течение всего месяца.</b>
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-9.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__message">
+                            Для каких животных подходит препарат Адвантикс®?
+                            <br>И можно ли применять его кошкам?
+                        </div>
+                        <div class="studyprogram__content">
+                            Адвантикс® подходит <b>собаĸам</b> всех размеров и пород.
+                            <br>Щенĸам от 7 недель и/или весом от 1,5 ĸг. Кошкам не применяется!
+                            <br>
+                            <b>В ассортименте Адвантикс® 5 видов препарата (по весу питомца):</b>
+                            <br>
+                            <br>
+                        </div>
+
+                        <img src="./static/img/content/study-img5.png" alt="">
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-10.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__message">
+                            Какие действующие вещества в составе Адвантикс®?
+                        </div>
+                        <div class="studyprogram__content">
+                            <ul>
+                                <li>Имидаклоприд</li>
+                                <li>Перметрин</li>
+                            </ul>
+                        </div>
+
+                        <div class="studyprogram__adv-title">
+                            Преимущества имидаклоприда в составе Адвантикс®
+                        </div>
+
+                        <img src="./static/img/content/study-img6.png" alt="">
+
+                        <div class="studyprogram__infotext">
+                            * Heinz Mehlhorn, Norbert Mencke, Olaf Hansen. Effects of imidacloprid on adult and larval stages of the flea Ctenocephalides felis after in vivo and in vitro application: a light- and electron-microscopy study. Parasitol Res (1999) 85: 625 ± 637/ Хайнц
+                            Мельхорн, Норберт Менке, Олаф Хансен. Влияние имидаклоприда на взрослую и личиночную стадии блох Стеноцефалидес фелис после применения ин виво и ин витро: исследование методом световой и электронной микроскопии. Журнал: Паразитологические
+                            исследования (1999) 85: 625 ± 637.
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-11.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            <b>Способ применения:</b>
+                            <ul>
+                                <li>Раздвинуть шерсть, чтобы стало видно кожу</li>
+                                <li>Нанести содержимое пипетки на кожу</li>
+                                <li>Повторить обработку через 4 недели</li>
+                            </ul>
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-12.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            В зависимости от массы животного используют Адвантикс® различной фасовки. При обработке собак более 60 кг используется комбинация пипеток. Препарат применяют наружно, путем нанесения на кожу в области холки в одну точку или вдоль позвоночника в несколько
+                            точек, в зависимости от веса животного.
+                            <br>
+                            <br>до 4 кг - 1 пипетка (0,4 мл)
+                            <br>4–10 кг - 1 пипетка (1,0 мл)
+                            <br>10–25 кг - 1 пипетка (2,5 мл)
+                            <br>25–40 кг - 1 пипетка (4,0 мл)
+                            <br>40–60 кг - 1 пипетка (6,0 мл)
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program2-13.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__adv-title">
+                            Преимущества препарата Адвантикс®:
+                        </div>
+
+                        <div class="studyprogram__biglist">
+                            <div class="studyprogram__biglist-item">
+                                <div class="studyprogram__biglist-icon">
+                                    <img src="./static/img/content/biglist-icon1.svg" alt="">
+                                </div>
+                                <div class="studyprogram__biglist-text">
+                                    Действует на клещей, блох,
+                                    <br>власоедов и летающих насекомых
+                                </div>
+                            </div>
+                            <div class="studyprogram__biglist-item">
+                                <div class="studyprogram__biglist-icon">
+                                    <img src="./static/img/content/biglist-icon2.svg" alt="">
+                                </div>
+                                <div class="studyprogram__biglist-text">
+                                    Отпугивает паразитов при
+                                    <br>контакте, предотвращая укус
+                                </div>
+                            </div>
+                            <div class="studyprogram__biglist-item">
+                                <div class="studyprogram__biglist-icon">
+                                    <img src="./static/img/content/biglist-icon3.svg" alt="">
+                                </div>
+                                <div class="studyprogram__biglist-text">
+                                    Действует в
+                                    <br>течение месяца
+                                </div>
+                            </div>
+                            <div class="studyprogram__biglist-item">
+                                <div class="studyprogram__biglist-icon">
+                                    <img src="./static/img/content/biglist-icon4.svg" alt="">
+                                </div>
+                                <div class="studyprogram__biglist-text">
+                                    Разрешен маленьким
+                                    <br>собакам от 1,5 кг
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <a href="./study-finish2.html" class="button">Дальше</a>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="copyright">
-                    <div class="copyright__column">
-                        <p>
-                            <b>ООО «Эланко Рус»</b>
-                            <br>Юридический адрес: 123112, Москва, Пресненская набережная, д.10, этаж 16, помещение 1Б, комната 13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ИНН: 7823777713 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ОГРН: 1027810304380
-                        </p>
-                        <p>
-                            <a href="">Политика конфиденциальности</a>
-                        </p>
-                        <p>
-                            Не является публичной офертой. Адвантикс, Мильбемакс, Milbemax, Форесто, Elanco и диагональная полоса являются товарными знаками Elanco или его аффилированных лиц.
-                        </p>
-                        <p>
-                            ©2023 Elanco и его аффилированные лица. PM-RU-22-0071. Все права защищены
-                        </p>
-                    </div>
                     <div class="copyright__column">
                         <div class="copyright__big">
                             ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ.
                             <br>ПЕРЕД ПРИМЕНЕНИЕМ ОЗНАКОМЬТЕСЬ С ИНСТРУКЦИЕЙ.
                         </div>
-                        <p>
-                            <a href="#" data-popup-open="popup__help">Служба поддержки</a>
-                            <a href="#" data-popup-open="popup__rules">Правила Программы</a>
-                        </p>
-                        <p>
-                            Программа действует на территории РФ для продавцов зоомагазинов. Общий срок Программы с 01.03.2023 г. по 31.05.2023 г. Информация об организаторе Программы, о правилах ее проведения, количестве подарков, сроках, месте и порядке их получения предоставляется
-                            организатором Программы ООО «Революшн» по телефону горячей линии: +7(964) 719-72-74 (с 10:00 до 18:00 МСК).
-                        </p>
                     </div>
                 </div>
             </div>
@@ -617,6 +915,7 @@
 
 
         <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
         <script src="static/js/main.min.js"></script>
     </body>
 

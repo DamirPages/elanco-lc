@@ -62,64 +62,374 @@
         </header>
         <div class="main">
             <div class="main__container">
-                <div class="login">
-                    <div class="title">
-                        Вход в личный кабинет
-                    </div>
-                    <form class="login__form">
-                        <div class="login__input">
-                            <label for="tel" class="login__placeholder">
-                                Номер телефона
-                            </label>
-                            <input type="text" id="tel" class="tel" value="" placeholder="+7 (123) 456 7890">
+                <div class="progress">
+                    <div class="progress__title">
+                        <div class="progress__name">Обучение</div>
+                        <div class="progress__num">
+                            Пройдено
+                            <span class="progress-current">0</span>
+                            <span>/</span>
+                            <span class="progress-total">0</span>
                         </div>
-                        <div class="login__input">
-                            <label for="password" class="login__placeholder">
-                                Пароль
-                            </label>
-                            <input type="password" id="password" value="12345678">
-                            <div class="input-toggler">
-                                <img src="./static/img/content/eye-close.svg" alt="">
-                                <img src="./static/img/content/eye-open.svg" alt="">
+                    </div>
+                    <div class="progress__line">
+                        <div class="progress__fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <form class="test">
+                    <input type="hidden" name="answer-percent" class="answer-percent">
+                    <!-- 0...100% -->
+                    <div class="test__container active">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    Против каких паразитов помогает защитить собаку препарат Адвантикс®?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
                             </div>
                         </div>
-                        <button class="button">
-                            Войти
-                        </button>
-                        <a href="#" class="login__link">
-                      Забыли пароль?
-                    </a>
-                    </form>
-                </div>
-                <div class="copyright">
-                    <div class="copyright__column">
-                        <p>
-                            <b>ООО «Эланко Рус»</b>
-                            <br>Юридический адрес: 123112, Москва, Пресненская набережная, д.10, этаж 16, помещение 1Б, комната 13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ИНН: 7823777713 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ОГРН: 1027810304380
-                        </p>
-                        <p>
-                            <a href="">Политика конфиденциальности</a>
-                        </p>
-                        <p>
-                            Не является публичной офертой. Адвантикс, Мильбемакс, Milbemax, Форесто, Elanco и диагональная полоса являются товарными знаками Elanco или его аффилированных лиц.
-                        </p>
-                        <p>
-                            ©2023 Elanco и его аффилированные лица. PM-RU-22-0071. Все права защищены
-                        </p>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest2-1" value="А">
+                                <span class="answer ">Иксодовые клещи, блохи, вши, власоеды, круглые гельминты</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest2-1" value="Б">
+                                <span class="answer">Блохи, комары, москиты, мухи</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest2-1" value="В">
+                                <span class="answer">Иксодовые клещи, блохи, власоеды, комары, москиты, мухи</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Обратите внимание, что Адвантикс® - один из немногих, который действует против назойливых летающих насекомых, защищая собак от их укусов.
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Адвантикс® защищает от иксодовых клещей, блох, власоедов, комаров, москитов и мух.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
                     </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    В течение какого времени после обработки капли на холку Адвантикс® оказывают инсектоакарицидное и репеллентное действие?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest2-2" value="А">
+                                <span class="answer ">До 4 недель</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest2-2" value="Б">
+                                <span class="answer">До 7 дней</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest2-2" value="В">
+                                <span class="answer">До 128 часов</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Адвантикс® сохраняет инсектоакарицидное и репеллентное действия в течение 4 недель.
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Адвантикс® работает гораздо дольше! Он сохраняет инсектоакарицидное и репеллентное действия в течение 4 недель.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
+                    </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    Назовите преимущество капель на холку Адвантикс® перед другими препаратами, обладающими инсектоакарицидным  действием.
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest2-3" value="А">
+                                <span class="answer ">Адвантикс® действует на клещей и летающих насекомых до того, как они успеют укусить, что снижает риск передачи опасных заболеваний (репеллентный эффект)</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest2-3" value="Б">
+                                <span class="answer">Адвантикс® помогает защищать собаку в течение одного месяца, что повышает профиль безопасности препарата</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest2-3" value="В">
+                                <span class="answer">Адвантикс® фасуют в полимерных пипетках, которые защищают раствор от проникновения солнечных лучей, что помогает предотвратить порчу препарата</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Адвантикс® действует на клещей и летающих насекомых ДО УКУСА, снижая риск передачи опасных заболеваний.
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Адвантикс® действует на клещей и летающих насекомых ДО УКУСА, снижая риск передачи опасных заболеваний.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
+                    </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    Опишите преимущество действия на клеща капель на холку Адвантикс® при контакте с обработанной собакой.
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest2-4" value="А">
+                                <span class="answer ">При контакте клеща с шерстью животного, паразит находит место для прикрепления. Начинает питаться. Действующие вещества попадают в паразита. Он парализуется и погибает.</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest2-4" value="Б">
+                                <span class="answer">При контакте клеща с кожей и шерстью собаки, действующие вещества проникают через его лапки, клещ парализуется, покидает животное и погибает в окружающей среде.</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest2-4" value="В">
+                                <span class="answer">При контакте клеща с шерстью животного, паразит, почувствовав запах капель на холку, стремится покинуть питомца и погибает в окружающей среде.</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Главное, что клещу не всегда нужно кусать, чтобы действующие вещества препарата Адвантикс® начали на него действовать.
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Клещу не всегда нужно кусать, чтобы действующие вещества препарата Адвантикс® начали на него действовать. При контакте с кожей и шерстью собаки клещ парализуется, покидает животное и погибает в окружающей среде.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
+                    </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    Если собака, обработанная препаратом Адвантикс®, попала под дождь во время прогулки или искупалась в речке, продолжит ли действовать препарат?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest2-5" value="А">
+                                <span class="answer ">Собака намокнет и препарат смоется с поверхности тела собаки.</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest2-5" value="Б">
+                                <span class="answer">Препарат продолжает действовать, даже есть шерсть намокнет, так как действующие вещества распространяются в липидном слое на поверхности тела и шерсти, а этот слой не смывается водой.</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest2-5" value="В">
+                                <span class="answer">Препарат продолжает действовать, но репеллентный эффект больше не будет работать, потому что вода смоет перметрин с шерсти собаки.</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Адвантикс® продолжает действовать в полном объеме, даже если шерсть собаки намокнет.
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Адвантикс® продолжает действовать в полном объеме, даже если  шерсть собаки намокнет.
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="button" disabled>
+                            Следующий вопрос
+                        </button>
+                    </div>
+                </form>
+                <div class="copyright">
                     <div class="copyright__column">
                         <div class="copyright__big">
                             ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ.
                             <br>ПЕРЕД ПРИМЕНЕНИЕМ ОЗНАКОМЬТЕСЬ С ИНСТРУКЦИЕЙ.
                         </div>
-                        <p>
-                            <a href="#" data-popup-open="popup__help">Служба поддержки</a>
-                            <a href="#" data-popup-open="popup__rules">Правила Программы</a>
-                        </p>
-                        <p>
-                            Программа действует на территории РФ для продавцов зоомагазинов. Общий срок Программы с 01.03.2023 г. по 31.05.2023 г. Информация об организаторе Программы, о правилах ее проведения, количестве подарков, сроках, месте и порядке их получения предоставляется
-                            организатором Программы ООО «Революшн» по телефону горячей линии: +7(964) 719-72-74 (с 10:00 до 18:00 МСК).
-                        </p>
                     </div>
                 </div>
             </div>

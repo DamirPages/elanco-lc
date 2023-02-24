@@ -50,6 +50,7 @@
             (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
         </script>
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
     </head>
 
     <body class="page">
@@ -62,64 +63,307 @@
         </header>
         <div class="main">
             <div class="main__container">
-                <div class="login">
-                    <div class="title">
-                        Вход в личный кабинет
-                    </div>
-                    <form class="login__form">
-                        <div class="login__input">
-                            <label for="tel" class="login__placeholder">
-                                Номер телефона
-                            </label>
-                            <input type="text" id="tel" class="tel" value="" placeholder="+7 (123) 456 7890">
+                <div class="progress">
+                    <div class="progress__title">
+                        <div class="progress__name">Обучение</div>
+                        <div class="progress__num">
+                            Пройдено
+                            <span class="progress-current">0</span>
+                            <span>/</span>
+                            <span class="progress-total">0</span>
                         </div>
-                        <div class="login__input">
-                            <label for="password" class="login__placeholder">
-                                Пароль
-                            </label>
-                            <input type="password" id="password" value="12345678">
-                            <div class="input-toggler">
-                                <img src="./static/img/content/eye-close.svg" alt="">
-                                <img src="./static/img/content/eye-open.svg" alt="">
+                    </div>
+                    <div class="progress__line">
+                        <div class="progress__fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="studyprogram">
+                    <div class="studyprogram__container active">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program1-1.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__title">
+                            Форесто® является препаратом №1 в России среди ошейников против клещей и блох по данным розничных продаж в денежном выражении*
+                        </div>
+                        <div class="studyprogram__text">
+                            * Форесто® №1 в России среди ошейников против клещей и блох, инсектоакарицидных и инсектоакарицидных комбинированных полимерных лент для кошек и собак по данным розничных продаж в денежном выражении. По данным RNC Pharma® АБД «Аудит розничных продаж ВетЛП
+                            в России» за 2022 год.
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program1-2.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            <b>Преимущества ошейника Форесто®:</b>
+                        </div>
+                        <div class="studyprogram__list">
+                            <div class="studyprogram__list-title">
+                                Защита
+                            </div>
+                            <div class="studyprogram__list-item">
+                                <div class="studyprogram__list-img">
+                                    <img src="./static/img/content/study-icon1.svg" alt="">
+                                </div>
+                                <div class="studyprogram__list-text">
+                                    Защищает питомца <b>ДО УКУСА</b>, снижая риск передачи паразитом опасных заболеваний
+                                </div>
+                            </div>
+                            <div class="studyprogram__list-item">
+                                <div class="studyprogram__list-img">
+                                    <img src="./static/img/content/study-icon2.svg" alt="">
+                                </div>
+                                <div class="studyprogram__list-text">
+                                    Защищает от иксодовых клещей, блох и их личинок, вшей, власоедов
+                                </div>
                             </div>
                         </div>
-                        <button class="button">
-                            Войти
-                        </button>
-                        <a href="#" class="login__link">
-                      Забыли пароль?
-                    </a>
-                    </form>
+                        <div class="studyprogram__list">
+                            <div class="studyprogram__list-title">
+                                УДОБСТВО
+                            </div>
+                            <div class="studyprogram__list-item">
+                                <div class="studyprogram__list-img">
+                                    <img src="./static/img/content/study-icon3.svg" alt="">
+                                </div>
+                                <div class="studyprogram__list-text">
+                                    Водостойкий, при намокании шерсти действие ошейника сохраняется
+                                </div>
+                            </div>
+                            <div class="studyprogram__list-item">
+                                <div class="studyprogram__list-img">
+                                    <img src="./static/img/content/study-icon4.svg" alt="">
+                                </div>
+                                <div class="studyprogram__list-text">
+                                    Не имеет запаха
+                                </div>
+                            </div>
+                            <div class="studyprogram__list-item">
+                                <div class="studyprogram__list-img">
+                                    <img src="./static/img/content/study-icon5.svg" alt="">
+                                </div>
+                                <div class="studyprogram__list-text">
+                                    Средняя цена в пересчете на месяц защиты - всего около 300 рублей!*
+                                </div>
+                            </div>
+                        </div>
+                        <div class="studyprogram__list">
+                            <div class="studyprogram__list-title">
+                                НА ДОЛГИЙ ПЕРИОД
+                            </div>
+                            <div class="studyprogram__list-item">
+                                <div class="studyprogram__list-img">
+                                    <img src="./static/img/content/study-icon6.svg" alt="">
+                                </div>
+                                <div class="studyprogram__list-text">
+                                    Один ошейник на весь сезон! Действует непрерывно в течение <b>8 МЕСЯЦЕВ</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="studyprogram__text">
+                            * Форесто® №1 в России среди ошейников против клещей и блох, инсектоакарицидных и инсектоакарицидных комбинированных полимерных лент для кошек и собак по данным розничных продаж в денежном выражении. По данным RNC Pharma® АБД «Аудит розничных продаж ВетЛП
+                            в России» за 2022 год.
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__message">
+                            Чем ошейник Форесто® лучше других средств защиты от внешних паразитов? Ведь он стоит дороже…
+                        </div>
+                        <img src="./static/img/content/study-img1.png" alt="">
+                        <div class="studyprogram__content">
+                            <b>Он действует снаружи, не оказывая негативного воздействия на организм питомца внутри.</b>
+                        </div>
+                        <div class="studyprogram__coloredtext">
+                            <b>Препараты без репеллентного действия - например, таблетки,</b>
+                            <span>НАЧИНАЮТ ДЕЙСТВОВАТЬ ПОСЛЕ УКУСА КЛЕЩА.</span>
+                            <br>Клещ должен закрепиться и начать питание, чтобы препарат подействовал.
+                        </div>
+                        <img src="./static/img/content/study-img2.png" alt="">
+                        <img src="./static/img/content/study-img3.png" alt="">
+                        <div class="studyprogram__coloredtext">
+                            Клещ, попадая на шерсть животного, подвергается репеллентному (отпугивающему) действию, стремится поскорее покинуть животное и погибает в окружающей среде, благодаря акарицидному действию.
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=G8lVXBN8ZFk" data-fancybox="video-gallery" class="studyprogram__video">
+                            <div class="studyprogram__video-preview">
+                                <img src="./static/img/content/study-video-bg1.jpg" alt="">
+                            </div>
+                            <div class="studyprogram__video-icon">
+                                <img src="./static/img/content/play.svg" alt="">
+                            </div>
+                            <div class="studyprogram__video-title">
+                                Посмотрите наглядное видео, как репеллентный эффект действует на паразитов
+                            </div>
+                        </a>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program1-3.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            <b>Ошейник Форесто® непрерывно действует на протяжении 8 месяцев.</b>
+                            <br>Форесто® производится в Германии с соблюдением высоких стандартов качества на всех этапах производства.
+                            <br>Вы  можете быть уверены в том, что продаете качественный препарат для защиты здоровья животных.
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program1-4.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__message">
+                            Нужно снимать ошейник каждый раз перед мытьем питомца?
+                        </div>
+                        <div class="studyprogram__content">
+                            Ошейник Форесто® водостойкий.
+                            <br>При намокании шерсти действие ошейника сохраняется, так что можно купать и мыть питомца, не снимая ошейника.
+                            <br>Даже если Ваш питомец намокнет, Вы будете спокойны, что  ошейник продолжает работать и обеспечивать защиту питомца.
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program1-5.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__message">
+                            Ошейник имеет сильный запах? Мне, наверное, будет некомфортно спать с ним в одной постели…
+                        </div>
+                        <div class="studyprogram__content">
+                            Ошейник Форесто® не имеет запаха, поэтому подходит для людей и животных с чувствительным обонянием. Это особенно важно, если вы любите спать со своим питомцем или ходить на охоту.
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program1-6.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__message">
+                            А что будет, если питомец зацепится ошейником?
+                        </div>
+                        <div class="studyprogram__content">
+                            Ошейник Форесто®  имеет особую систему безопасности: специальный МЕХАНИЗМ ВЫСВОБОЖДЕНИЯ, который позволяет в редких случаях, если собака или кошка зацепится ошейником, например, пролезая под забором, растегнуть ошейник собственными силами и быстро высвободиться.
+                            <br>
+                            <br>
+                            <br>
+                            <small>* место разрыва есть в ошейниках для кошек и мелких собак</small>
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program1-7.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__message">
+                            Для каких животных подходит ошейник Форесто®? Можно ли применять котятам и щенкам?
+                        </div>
+                        <div class="studyprogram__content">
+                            Ошейник Форесто®  подходит для собаĸ и кошек любых пород.
+                            <br>Щенĸам подходит с 7-недельного возраста. Котятам - с 10-недельного возраста.
+                            <br>
+                            <b>В ассортименте Форесто® 3 вида ошейников:</b>
+                            <ul>
+                                <li>Ошейник для кошек</li>
+                                <li>Ошейник для собак до 8 кг</li>
+                                <li>Ошейник для собак более 8 кг</li>
+                            </ul>
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program1-8.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__content">
+                            <b>Важно правильно надеть ошейник!</b>
+                            <br>1. Удалить пластиковые перемычки с поверхности ошейника. Надеть ошейник на животное.
+                            <br>2. Между ошейником и шеей животного должен оставаться промежуток в <b>1-1,5 см.</b>
+                            <br>Периодически проверять положение ошейника в течение сезона! Ошейник не должен висеть, как бусы.
+                            <br>3. Протянуть оставшуюся часть ленты ошейниĸа через петлю. Отрезать ĸончиĸ, оставив 2 см для взрослой собаĸи и чуть больше для растущего щенĸа.
+                            <br>4. По желанию приĸрепить на ошейниĸ светоотражающие элементы. Периодичесĸи проверять, чтобы ошейниĸ не был слишĸом туго затянут, но ĸасался шерсти.
+                        </div>
+
+                        <a href="https://www.youtube.com/watch?v=G8lVXBN8ZFk" data-fancybox="video-gallery2" class="studyprogram__video">
+                            <div class="studyprogram__video-preview">
+                                <img src="./static/img/content/study-video-bg2.jpg" alt="">
+                            </div>
+                            <div class="studyprogram__video-icon">
+                                <img src="./static/img/content/play.svg" alt="">
+                            </div>
+                            <div class="studyprogram__video-title">
+                                Форесто®
+                                <br>Как правильно надеть ошейник
+                            </div>
+                        </a>
+
+                        <div class="studyprogram__content">
+                            <b>! Призывайте покупателей посмотреть короткую видеоинструкцию на сайте производителя или перейдя по QR коду, который есть на брошюре и дисплее.</b>
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <div class="button button-next">Дальше</div>
+                        </div>
+                    </div>
+
+                    <div class="studyprogram__container">
+                        <div class="studyprogram__img">
+                            <img src="./static/img/content/program1-9.jpg" alt="">
+                        </div>
+                        <div class="studyprogram__message">
+                            Какие действующие вещества в составе ошейника Форесто®?
+                        </div>
+                        <div class="studyprogram__content">
+                            <ul>
+                                <li>Имидаĸлоприд</li>
+                                <li>Флуметрин</li>
+                            </ul>
+                            Действующие вещества дозированно выделяются, защищая <b>ВСЮ ПОВЕРХНОСТЬ ТЕЛА</b> животного в течение 8 месяцев. 
+                        </div>
+                        <div class="studyprogram__navigation">
+                            <div class="button button-prev">Назад</div>
+                            <a href="./study-finish1.html" class="button">Дальше</a>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="copyright">
-                    <div class="copyright__column">
-                        <p>
-                            <b>ООО «Эланко Рус»</b>
-                            <br>Юридический адрес: 123112, Москва, Пресненская набережная, д.10, этаж 16, помещение 1Б, комната 13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ИНН: 7823777713 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ОГРН: 1027810304380
-                        </p>
-                        <p>
-                            <a href="">Политика конфиденциальности</a>
-                        </p>
-                        <p>
-                            Не является публичной офертой. Адвантикс, Мильбемакс, Milbemax, Форесто, Elanco и диагональная полоса являются товарными знаками Elanco или его аффилированных лиц.
-                        </p>
-                        <p>
-                            ©2023 Elanco и его аффилированные лица. PM-RU-22-0071. Все права защищены
-                        </p>
-                    </div>
                     <div class="copyright__column">
                         <div class="copyright__big">
                             ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ.
                             <br>ПЕРЕД ПРИМЕНЕНИЕМ ОЗНАКОМЬТЕСЬ С ИНСТРУКЦИЕЙ.
                         </div>
-                        <p>
-                            <a href="#" data-popup-open="popup__help">Служба поддержки</a>
-                            <a href="#" data-popup-open="popup__rules">Правила Программы</a>
-                        </p>
-                        <p>
-                            Программа действует на территории РФ для продавцов зоомагазинов. Общий срок Программы с 01.03.2023 г. по 31.05.2023 г. Информация об организаторе Программы, о правилах ее проведения, количестве подарков, сроках, месте и порядке их получения предоставляется
-                            организатором Программы ООО «Революшн» по телефону горячей линии: +7(964) 719-72-74 (с 10:00 до 18:00 МСК).
-                        </p>
                     </div>
                 </div>
             </div>
@@ -617,6 +861,7 @@
 
 
         <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
         <script src="static/js/main.min.js"></script>
     </body>
 

@@ -62,64 +62,402 @@
         </header>
         <div class="main">
             <div class="main__container">
-                <div class="login">
-                    <div class="title">
-                        Вход в личный кабинет
-                    </div>
-                    <form class="login__form">
-                        <div class="login__input">
-                            <label for="tel" class="login__placeholder">
-                                Номер телефона
-                            </label>
-                            <input type="text" id="tel" class="tel" value="" placeholder="+7 (123) 456 7890">
+                <div class="progress">
+                    <div class="progress__title">
+                        <div class="progress__name">Обучение</div>
+                        <div class="progress__num">
+                            Пройдено
+                            <span class="progress-current">0</span>
+                            <span>/</span>
+                            <span class="progress-total">0</span>
                         </div>
-                        <div class="login__input">
-                            <label for="password" class="login__placeholder">
-                                Пароль
-                            </label>
-                            <input type="password" id="password" value="12345678">
-                            <div class="input-toggler">
-                                <img src="./static/img/content/eye-close.svg" alt="">
-                                <img src="./static/img/content/eye-open.svg" alt="">
+                    </div>
+                    <div class="progress__line">
+                        <div class="progress__fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <form class="test">
+                    <input type="hidden" name="answer-percent" class="answer-percent">
+                    <!-- 0...100% -->
+                    <div class="test__container active">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    На каких паразитов действует препарат Мильбемакс®?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
                             </div>
                         </div>
-                        <button class="button">
-                            Войти
-                        </button>
-                        <a href="#" class="login__link">
-                      Забыли пароль?
-                    </a>
-                    </form>
-                </div>
-                <div class="copyright">
-                    <div class="copyright__column">
-                        <p>
-                            <b>ООО «Эланко Рус»</b>
-                            <br>Юридический адрес: 123112, Москва, Пресненская набережная, д.10, этаж 16, помещение 1Б, комната 13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ИНН: 7823777713 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ОГРН: 1027810304380
-                        </p>
-                        <p>
-                            <a href="">Политика конфиденциальности</a>
-                        </p>
-                        <p>
-                            Не является публичной офертой. Адвантикс, Мильбемакс, Milbemax, Форесто, Elanco и диагональная полоса являются товарными знаками Elanco или его аффилированных лиц.
-                        </p>
-                        <p>
-                            ©2023 Elanco и его аффилированные лица. PM-RU-22-0071. Все права защищены
-                        </p>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest3-1" value="А">
+                                <span class="answer">На круглых гельминтов</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest3-1" value="Б">
+                                <span class="answer">На плоских гельминтов</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest3-1" value="В">
+                                <span class="answer">На ленточных гельминтов</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Г</span>
+                                <input type="radio" name="quest3-1" value="Г">
+                                <span class="answer">На круглых и ленточных гельминтов, включая сердечных паразитов</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    У препарата Мильбемакс® широкий спектр, он действует на круглых и ленточных гельминтов, включая сердечных паразитов. 
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    У препарата Мильбемакс® широкий спектр, он действует на круглых и ленточных гельминтов, включая сердечных паразитов.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
                     </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    В чем отличительные особенности препарата Мильбемакс®?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest3-2" value="А">
+                                <span class="answer">Широкий спектр защиты - действует на 12 видов круглых и ленточных гельминтов у собак и 6 видов круглых и ленточных гельминтов у кошек, включая смертельно опасных сердечных паразитов</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest3-2" value="Б">
+                                <span class="answer"> Удобная дозировка по весу и маленькая таблетка. Это облегчает дачу препарата животному!</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest3-2" value="В">
+                                <span class="answer">Эффективность и безопасность препарата подтверждены в многочисленных исследованиях. Препарат производится во Франции.</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Г</span>
+                                <input type="radio" name="quest3-2" value="Г">
+                                <span class="answer">Все ответы верны</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Вероятно, именно поэтому Мильбемакс® №1 в России среди антигельминтных препаратов для животных по продажам на розничном рынке. 
+                                    <br>
+                                    <small>По данным RNC Pharma® АБД «Аудит розничных продаж ВетЛП в России» за 2022 год.</small>
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Вы выбрали не все. У препарата Мильбемакс® преимуществ гораздо больше!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
+                    </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    Возможно ли применение Мильбемакс® беременным и лактирующим животным?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest3-3" value="А">
+                                <span class="answer">Применение беременным и лактирующим животным разрешено, но под наблюдением ветеринарного врача</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest3-3" value="Б">
+                                <span class="answer">Применение беременным и лактирующим животным разрешено только с 45 по 55 день беременности</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest3-3" value="В">
+                                <span class="answer">Можно применять беременным и лактирующим животным</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Г</span>
+                                <input type="radio" name="quest3-3" value="Г">
+                                <span class="answer">Не знаю</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Мильбемакс® обладает высоким профилем безопасности и его можно применять беременным и лактирующим животным
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Мильбемакс® обладает высоким профилем безопасности и его можно применять беременным и лактирующим животным
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
+                    </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    С какого возраста и веса можно применять Мильбемакс® щенкам и котятам?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest3-4" value="А">
+                                <span class="answer">Щенкам с 2-недель и 500 г веса,<br> котятам с 6-недель и 500 г веса</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest3-4" value="Б">
+                                <span class="answer">Щенкам с 6-недель и 500 г веса,<br> котятам с 2-недель и 500 г веса</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest3-4" value="В">
+                                <span class="answer">Щенкам с 2-недель и 1 кг веса,<br> котятам с 3-недель и 500 г веса</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Г</span>
+                                <input type="radio" name="quest3-4" value="Г">
+                                <span class="answer">Нет верного ответа</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Мильбемакс® высокого профиля безопасности и подходит таким маленьким.  
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Мильбемакс® обладает высоким профилем безопасности и он подходит таким маленьким.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button next-question" disabled>
+                            Следующий вопрос
+                        </div>
+                    </div>
+
+                    <div class="test__container">
+                        <!-- .quest-wrong .quest-correct -->
+                        <div class="test__dialog">
+                            <div class="test__dialog-question">
+                                <div class="test-message">
+                                    Как часто можно использовать препарат Мильбемакс® для профилактики?
+                                </div>
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/quest-icon2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="test__dialog-answer">
+                                <div class="test__dialog-icon">
+                                    <img src="./static/img/content/answer-icon.png" alt="">
+                                </div>
+                                <div class="test-message">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <span class="answer-count">А</span>
+                                <input type="radio" name="quest3-5" value="А">
+                                <span class="answer">Один раз в квартал</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Б</span>
+                                <input type="radio" name="quest3-5" value="Б">
+                                <span class="answer">Ежемесячно в период лета комаров, если необходима профилактика от сердечных гельминтов</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">В</span>
+                                <input type="radio" name="quest3-5" value="В">
+                                <span class="answer">Перед каждой вакцинацией и случкой</span>
+                            </label>
+                            <label class="test__answer">
+                                <span class="answer-count">Г</span>
+                                <input type="radio" name="quest3-5" value="Г">
+                                <span class="answer">Все ответы верны</span>
+                            </label>
+                        </div>
+                        <div class="test__answer-result">
+                            <div class="button button-show-result">
+                                Подтвердить ответ
+                            </div>
+                            <div class="test__result-yes">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-acept.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Верно :)
+                                </div>
+                                <div class="test__result-text">
+                                    Мильбемакс® подходит  для использования в профилактических и лечебных целях, а также может применяться ежемесячно или по необходимости. 
+                                </div>
+                            </div>
+                            <div class="test__result-no">
+                                <div class="test__result-icon">
+                                    <img src="./static/img/content/result-wrong.svg" alt="">
+                                </div>
+                                <div class="test__result-title">
+                                    Не совсем так :(
+                                </div>
+                                <div class="test__result-text">
+                                    Мильбемакс® подходит  для использования в профилактических и лечебных целях, а также может применяться ежемесячно или по необходимости. 
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="button" disabled>
+                            Следующий вопрос
+                        </button>
+                    </div>
+
+                </form>
+                <div class="copyright">
                     <div class="copyright__column">
                         <div class="copyright__big">
                             ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ.
                             <br>ПЕРЕД ПРИМЕНЕНИЕМ ОЗНАКОМЬТЕСЬ С ИНСТРУКЦИЕЙ.
                         </div>
-                        <p>
-                            <a href="#" data-popup-open="popup__help">Служба поддержки</a>
-                            <a href="#" data-popup-open="popup__rules">Правила Программы</a>
-                        </p>
-                        <p>
-                            Программа действует на территории РФ для продавцов зоомагазинов. Общий срок Программы с 01.03.2023 г. по 31.05.2023 г. Информация об организаторе Программы, о правилах ее проведения, количестве подарков, сроках, месте и порядке их получения предоставляется
-                            организатором Программы ООО «Революшн» по телефону горячей линии: +7(964) 719-72-74 (с 10:00 до 18:00 МСК).
-                        </p>
                     </div>
                 </div>
             </div>
