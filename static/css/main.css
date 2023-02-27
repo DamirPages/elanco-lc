@@ -1399,6 +1399,38 @@ body [data-tab-container].active {
   width: 463px;
 }
 
+.lc-info {
+  padding: 40px 45px 40px 45px;
+}
+@media only screen and (max-width: 767px) {
+  .lc-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+}
+
+.lc-info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  color: #333333;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.lc-info-user {
+  margin-right: 40px;
+}
+
 .login {
   margin: auto;
   padding: 30px;
@@ -1534,6 +1566,7 @@ body [data-tab-container].active {
   position: relative;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  max-width: 303px;
 }
 .input input {
   border: 1px solid rgba(0, 0, 0, 0.38);
@@ -1612,6 +1645,7 @@ body [data-tab-container].active {
 .textarea {
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 .textarea textarea {
   width: 100%;
@@ -1649,13 +1683,14 @@ body [data-tab-container].active {
 .placeholder {
   position: absolute;
   left: 9px;
-  top: -7px;
+  top: -8px;
   background: #FFFFFF;
   font-size: 12px;
   line-height: 15px;
   color: rgba(0, 0, 0, 0.6);
   padding-left: 3px;
   padding-right: 3px;
+  z-index: 2;
 }
 
 .lc-container-success {
@@ -1842,7 +1877,7 @@ body [data-tab-container].active {
 }
 .popup__rules .popup__title, .popup__politic .popup__title {
   font-size: 1.806vw;
-  line-height: 140%;
+  line-height: 120%;
   text-align: center;
   margin-bottom: 0;
 }
@@ -2037,6 +2072,10 @@ body [data-tab-container].active {
   }
 }
 
+.popup__politic .popup__title br {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   body .popup .popup__container {
     margin-bottom: 0;
@@ -2112,6 +2151,9 @@ body [data-tab-container].active {
   .popup__politic .popup__title {
     font-size: 5.556vw;
     margin-bottom: 3.056vw;
+  }
+  .popup__politic .popup__title br {
+    display: block;
   }
   .popup__politic .popup__content {
     padding-right: 4.167vw;
@@ -2333,6 +2375,15 @@ body [data-tab-container].active {
   top: 3px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media only screen and (max-width: 767px) {
