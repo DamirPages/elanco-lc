@@ -63,23 +63,6 @@ popupCloseButtons.forEach(function (closeBtn) {
 });
 "use strict";
 
-var emptyVlidationFields = document.querySelectorAll('.empty-validation');
-emptyVlidationFields.forEach(function (field) {
-  var container = field.closest('.lc-container');
-  var textAreaContainer = field.parentElement;
-  var button = container === null || container === void 0 ? void 0 : container.querySelector('.button-js');
-  field.addEventListener('input', function () {
-    if (!field.value.length) {
-      textAreaContainer.classList.remove('valid');
-      button === null || button === void 0 ? void 0 : button.setAttribute('disabled', true);
-      return;
-    }
-    textAreaContainer.classList.add('valid');
-    button === null || button === void 0 ? void 0 : button.removeAttribute('disabled');
-  });
-});
-"use strict";
-
 var inputEqualValidation = document.querySelectorAll('[data-validate-equal]');
 inputEqualValidation.forEach(function (input) {
   var validValues = input.dataset.validateEqual;
@@ -97,6 +80,23 @@ inputEqualValidation.forEach(function (input) {
     }
     inputContainer.classList.remove('valid');
     button.setAttribute('disabled', true);
+  });
+});
+"use strict";
+
+var emptyVlidationFields = document.querySelectorAll('.empty-validation');
+emptyVlidationFields.forEach(function (field) {
+  var container = field.closest('.lc-container');
+  var textAreaContainer = field.parentElement;
+  var button = container === null || container === void 0 ? void 0 : container.querySelector('.button-js');
+  field.addEventListener('input', function () {
+    if (!field.value.length) {
+      textAreaContainer.classList.remove('valid');
+      button === null || button === void 0 ? void 0 : button.setAttribute('disabled', true);
+      return;
+    }
+    textAreaContainer.classList.add('valid');
+    button === null || button === void 0 ? void 0 : button.removeAttribute('disabled');
   });
 });
 "use strict";
